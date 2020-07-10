@@ -1,5 +1,7 @@
 # UniRectTransformInsideCamera
 
+RectTransform を持つ UI オブジェクトがゲーム画面の範囲内に存在するかどうかを確認できる機能
+
 ## 使用例
 
 ```cs
@@ -22,8 +24,10 @@ public class Example : MonoBehaviour
 
     private void Update()
     {
+        // UI オブジェクトがゲーム画面の範囲内に存在するかどうかを確認
         var isInside = RectTransformInsideCamera.IsInside( m_rectTransform, m_camera );
 
+        // 範囲外に存在する場合は非表示にする
         m_graphic.enabled = isInside;
     }
 }
